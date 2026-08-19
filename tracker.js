@@ -327,6 +327,144 @@ const PRODUCTS = [
     image: "https://images.pexels.com/photos/27299906/pexels-photo-27299906.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     badge: "hot",
     specs: ["Limited Edition", "Flyknit", "AG/FG", "Speed"]
+  },
+
+  // ── NEW: CRICKET (previously-unused verified photography) ──
+  {
+    id: 25,
+    name: "Wicket-Keeping Gloves & Pads Combo",
+    brand: "SG",
+    category: "Cricket",
+    price: 6499,
+    oldPrice: 7999,
+    description: "Full wicket-keeping combo with padded gloves and lightweight leg guards. Reinforced palm cushioning absorbs high-pace deliveries behind the stumps.",
+    image: "https://images.pexels.com/photos/35801175/pexels-photo-35801175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "new",
+    specs: ["Keeping Gloves", "Leg Guards", "Padded Palm", "Match Grade"]
+  },
+  {
+    id: 26,
+    name: "Test-Match Grade Cricket Ball — SG",
+    brand: "SG",
+    category: "Cricket",
+    price: 2399,
+    oldPrice: null,
+    description: "Premium four-piece red leather cricket ball built for Test-match durability. Deep, even seam for consistent swing across long spells.",
+    image: "https://images.pexels.com/photos/5519470/pexels-photo-5519470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: null,
+    specs: ["156g", "4-Piece", "Deep Seam", "Test Grade"]
+  },
+  {
+    id: 27,
+    name: "Kookaburra Kahuna Batting Practice Set",
+    brand: "Kookaburra",
+    category: "Cricket",
+    price: 10999,
+    oldPrice: 13499,
+    description: "Match-simulation batting practice set for drive and footwork drills, as used in pre-season nets. Includes bat, ball feeder cones, and stance markers.",
+    image: "https://images.pexels.com/photos/29463867/pexels-photo-29463867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "hot",
+    specs: ["Nets Practice", "Bat Included", "Footwork Drills", "Coach Kit"]
+  },
+
+  // ── NEW: RACKET SPORTS (previously-unused verified photography) ──
+  {
+    id: 28,
+    name: "Babolat Pure Drive Tennis Racquet",
+    brand: "Babolat",
+    category: "Rackets",
+    price: 15499,
+    oldPrice: 17999,
+    description: "Tour-level Babolat frame with FSI Power technology for a blend of pace and control. 100 sq-in head with 16x19 open string pattern for extra spin.",
+    image: "https://images.pexels.com/photos/32390768/pexels-photo-32390768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "sale",
+    specs: ["300g", "100 sq in", "16x19", "FSI Power"]
+  },
+
+  // ── NEW: SAME-SKU VARIANTS (identical, verified brand photography) ──
+  {
+    id: 29,
+    name: "Match-Grade Soccer Ball — Pack of 2",
+    brand: "Adidas",
+    category: "Football",
+    price: 8499,
+    oldPrice: 10999,
+    description: "Two official size-5 match footballs with thermal-bonded panels, packed together for club and academy training sessions.",
+    image: "https://images.pexels.com/photos/28222529/pexels-photo-28222529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "sale",
+    specs: ["2 Balls", "Size 5", "Thermal-bonded", "FIFA Approved"]
+  },
+  {
+    id: 30,
+    name: "English Willow Cricket Bat — Player Edition",
+    brand: "SS Ton",
+    category: "Cricket",
+    price: 17999,
+    oldPrice: 21999,
+    description: "Player-edition upgrade on our Grade-A willow bat with a lower swell and bigger edges for power hitters. Hand-selected 10+ straight grains.",
+    image: "https://images.pexels.com/photos/35825599/pexels-photo-35825599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "hot",
+    specs: ["English Willow", "Player Edition", "10+ Grains", "Big Edges"]
+  },
+  {
+    id: 31,
+    name: "Pro Tennis Racquet — 285g Tour Weight",
+    brand: "Wilson",
+    category: "Rackets",
+    price: 12999,
+    oldPrice: 14999,
+    description: "Lighter tour-weight build of our 100 sq-in frame for faster racquet-head speed. Graphite composite with the same 16x19 control-oriented pattern.",
+    image: "https://images.pexels.com/photos/5741292/pexels-photo-5741292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: null,
+    specs: ["285g", "100 sq in", "16x19", "Graphite"]
+  },
+  {
+    id: 32,
+    name: "Badminton Rackets & Shuttlecock Set — Pro Tension",
+    brand: "Yonex",
+    category: "Rackets",
+    price: 5999,
+    oldPrice: 6999,
+    description: "Higher-tension stringing of our two-racquet isometric set for advanced club players who want a crisper, faster response off the string bed.",
+    image: "https://images.pexels.com/photos/6307230/pexels-photo-6307230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "new",
+    specs: ["2 Rackets", "Pro Tension", "Carbon Shaft", "Feather Shuttles"]
+  },
+  {
+    id: 33,
+    name: "Indoor/Outdoor Composite Basketball — Size 6",
+    brand: "Spalding",
+    category: "Basketball",
+    price: 3299,
+    oldPrice: 3999,
+    description: "Women's and youth regulation size-6 composite basketball with the same deep-channel grip as our size-7 model, for indoor and outdoor courts.",
+    image: "https://images.pexels.com/photos/19932843/pexels-photo-19932843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: null,
+    specs: ["Size 6", "Composite Leather", "Deep Channel", "Indoor/Outdoor"]
+  },
+  {
+    id: 34,
+    name: "Rubber-Coated Dumbbell Set — 20kg Pair",
+    brand: "D-SPORTS",
+    category: "Gym",
+    price: 8499,
+    oldPrice: 9999,
+    description: "Heavier 20 kg-pair addition to our rubber-coated hex dumbbell range, same non-roll hexagonal design with chrome knurled handles.",
+    image: "https://images.pexels.com/photos/7187871/pexels-photo-7187871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: "sale",
+    specs: ["20 kg Pair", "Hex Design", "Rubber Coated", "Chrome Handle"]
+  },
+  {
+    id: 35,
+    name: "Neutral Road Running Shoes — Wide Fit",
+    brand: "Nike",
+    category: "Running",
+    price: 7299,
+    oldPrice: 8799,
+    description: "Wide-fit version of our neutral road runner for extra forefoot room, same responsive foam midsole and breathable mesh upper.",
+    image: "https://images.pexels.com/photos/1456733/pexels-photo-1456733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    badge: null,
+    specs: ["Wide Fit", "Foam Midsole", "Mesh Upper", "Road"]
   }
 ];
 
@@ -347,13 +485,52 @@ const GALLERY_IMAGES = [
 // ──────────────────────────────────────────────────
 // 3.  ANALYTICS ENGINE — Silent Background Clickstream
 // ──────────────────────────────────────────────────
+// ──────────────────────────────────────────────────
+// 3.  ANALYTICS ENGINE — Background Clickstream + Google Sheets Sync
+//
+//     Real interaction data only. Persisted to localStorage so it
+//     survives reloads, and (optionally) synced to a Google Sheet so
+//     the site owner can see real visitor activity centrally — not
+//     just trapped in each visitor's own browser.
+//
+//     SETUP: deploy the companion Apps Script (see google-apps-script.gs)
+//     as a Web App, then paste the deployment URL into CONFIG below.
+//     Leave it blank to log locally only (CSV export still works).
+//
+//     NOTE ON PRIVACY: this engine never captures or transmits
+//     password values — only that a login/registration event
+//     happened (start / submit / error). See handleLogin/handleRegister.
+// ──────────────────────────────────────────────────
+const CONFIG = {
+  GOOGLE_SHEET_WEBHOOK_URL: "", // paste your deployed Apps Script /exec URL here
+  SYNC_INTERVAL_MS: 8000,
+  MAX_STORED_LOGS: 10000
+};
+
 const AnalyticsEngine = (() => {
   let logs = [];
+  let syncQueue = [];
   let sessionStartTime = Date.now();
   let pageStartTime = Date.now();
   let currentPage = "home";
-  const userId = "U-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+  const userId = getOrCreateUserId();
   const sessionId = "S-" + Date.now().toString(36).toUpperCase() + Math.random().toString(36).substring(2, 5).toUpperCase();
+
+  // ── Persistent, returning-visitor-aware User ID ──
+  // Stored once per browser so repeat visits are recognizable as the
+  // same visitor (supports "returning users" / retention metrics).
+  function getOrCreateUserId() {
+    try {
+      let id = localStorage.getItem("dsports_user_id");
+      if (!id) {
+        id = "U-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+        localStorage.setItem("dsports_user_id", id);
+      }
+      return id;
+    } catch (e) {
+      return "U-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+    }
+  }
 
   function getDevice() {
     const w = window.innerWidth;
@@ -378,6 +555,21 @@ const AnalyticsEngine = (() => {
   function timeOnPage() { return ((Date.now() - pageStartTime) / 1000).toFixed(1); }
   function sessionTime() { return ((Date.now() - sessionStartTime) / 1000).toFixed(1); }
 
+  // ── Local persistence ──
+  function loadStoredLogs() {
+    try {
+      const raw = localStorage.getItem("dsports_clickstream_logs");
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+  function persistLogs() {
+    try {
+      const trimmed = logs.length > CONFIG.MAX_STORED_LOGS ? logs.slice(logs.length - CONFIG.MAX_STORED_LOGS) : logs;
+      localStorage.setItem("dsports_clickstream_logs", JSON.stringify(trimmed));
+    } catch (e) { /* storage full — keep going in-memory */ }
+  }
+  logs = loadStoredLogs();
+
   function logEvent(eventType, extra = {}) {
     const entry = {
       User_ID: extra.User_ID || userId,
@@ -399,6 +591,8 @@ const AnalyticsEngine = (() => {
       Language: extra.Language || getLang()
     };
     logs.push(entry);
+    persistLogs();
+    syncQueue.push(Object.assign({ sheet: "Clickstream" }, entry));
   }
 
   function trackPageView(page) { pageStartTime = Date.now(); currentPage = page; logEvent("page_view"); }
@@ -445,6 +639,50 @@ const AnalyticsEngine = (() => {
     logEvent("form_" + eventType, { Button_Click: formName });
   }
 
+  // ── Real orders placed (products bought, quantities, totals) ──
+  // Never includes payment card numbers or passwords — card fields in
+  // this demo checkout are not read into this object at all.
+  function logOrder(order) {
+    try {
+      const key = "dsports_orders";
+      const existing = JSON.parse(localStorage.getItem(key) || "[]");
+      existing.push(order);
+      localStorage.setItem(key, JSON.stringify(existing));
+    } catch (e) { /* ignore storage errors */ }
+    syncQueue.push(Object.assign({ sheet: "Orders" }, order));
+  }
+
+  // ── Real registered/logged-in visitors (name + email only) ──
+  // Passwords are intentionally never passed into this function.
+  function logUser(user) {
+    try {
+      const key = "dsports_users";
+      const existing = JSON.parse(localStorage.getItem(key) || "[]");
+      existing.push(user);
+      localStorage.setItem(key, JSON.stringify(existing));
+    } catch (e) { /* ignore storage errors */ }
+    syncQueue.push(Object.assign({ sheet: "Users" }, user));
+  }
+
+  // ── Google Sheets sync (optional — only runs if a webhook URL is set) ──
+  function flushQueue(useBeacon) {
+    if (!CONFIG.GOOGLE_SHEET_WEBHOOK_URL || syncQueue.length === 0) return;
+    const batch = syncQueue.splice(0, syncQueue.length);
+    const payload = JSON.stringify({ rows: batch });
+    try {
+      if (useBeacon && navigator.sendBeacon) {
+        navigator.sendBeacon(CONFIG.GOOGLE_SHEET_WEBHOOK_URL, new Blob([payload], { type: "text/plain;charset=UTF-8" }));
+      } else {
+        fetch(CONFIG.GOOGLE_SHEET_WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors", // Apps Script Web Apps don't return CORS headers; we don't need to read the response
+          headers: { "Content-Type": "text/plain;charset=UTF-8" },
+          body: payload
+        });
+      }
+    } catch (e) { /* offline or blocked — data still safe in localStorage */ }
+  }
+
   function exportCSV() {
     const headers = [
       "User_ID", "Session_ID", "Timestamp", "Page_Visited", "Event_Type",
@@ -470,78 +708,7 @@ const AnalyticsEngine = (() => {
     URL.revokeObjectURL(link.href);
   }
 
-  function seedSyntheticLogs(count) {
-    const pages = ["home", "products", "about", "services", "gallery", "faq", "contact", "wishlist", "cart", "checkout"];
-    const events = ["page_view", "click", "scroll_depth", "hover", "search", "form_start", "form_submit", "right_click", "double_click", "form_error", "form_abandon"];
-    const devices = ["Desktop", "Mobile", "Tablet"];
-    const browsers = ["Chrome", "Firefox", "Safari", "Edge"];
-    const resolutions = ["1920x1080", "1366x768", "1440x900", "375x812", "414x896", "768x1024", "2560x1440"];
-    const referrers = ["Direct", "https://google.com", "https://instagram.com", "https://facebook.com", "https://twitter.com", "https://youtube.com"];
-    const languages = ["en-US", "en-IN", "hi-IN", "mr-IN", "en-GB"];
-    const searchTerms = ["cricket bat", "football", "nike shoes", "basketball", "tennis racket", "dumbbells", "running shoes", "badminton", "goalkeeper gloves", "kettlebell", "gym weights", "adidas", "puma", "yonex", "wilson", "spalding", "soccer ball", "cricket ball"];
-    const buttons = ["Add to Cart", "Buy Now", "View Details", "Add to Wishlist", "Remove", "Checkout", "Apply Coupon", "Continue Shopping", "Search", "Filter", "Sort", "Clear All"];
-    const productNames = PRODUCTS.map(p => p.name);
-    const scrollDepths = ["25%", "50%", "75%", "100%"];
-
-    function rnd(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-    function rndInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-
-    const syntheticUsers = [];
-    for (let i = 0; i < 25; i++) syntheticUsers.push("U-" + Math.random().toString(36).substring(2, 8).toUpperCase());
-
-    const syntheticSessions = [];
-    for (let i = 0; i < 60; i++) syntheticSessions.push("S-" + Math.random().toString(36).substring(2, 10).toUpperCase());
-
-    const baseTime = new Date();
-    baseTime.setHours(baseTime.getHours() - 48);
-
-    for (let i = 0; i < count; i++) {
-      const eventType = rnd(events);
-      const device = rnd(devices);
-      const entry = {
-        User_ID: rnd(syntheticUsers),
-        Session_ID: rnd(syntheticSessions),
-        Timestamp: new Date(baseTime.getTime() + rndInt(0, 172800) * 1000).toISOString(),
-        Page_Visited: rnd(pages),
-        Event_Type: eventType,
-        Click_Position: "",
-        Button_Click: "",
-        Mouse_Hover: "",
-        Scroll_Depth: "",
-        Search_Query: "",
-        Time_On_Page: rndInt(1, 300).toFixed(1),
-        Session_Time: rndInt(10, 1800).toFixed(1),
-        Device: device,
-        Browser: rnd(browsers),
-        Screen_Resolution: rnd(resolutions),
-        Referrer: rnd(referrers),
-        Language: rnd(languages)
-      };
-      if (eventType === "click" || eventType === "right_click" || eventType === "double_click") {
-        const maxX = device === "Mobile" ? 414 : device === "Tablet" ? 768 : 1920;
-        const maxY = device === "Mobile" ? 812 : device === "Tablet" ? 1024 : 1080;
-        entry.Click_Position = rndInt(10, maxX) + "," + rndInt(10, maxY);
-        if (eventType === "click") entry.Button_Click = rnd(buttons);
-      } else if (eventType === "scroll_depth") {
-        entry.Scroll_Depth = rnd(scrollDepths);
-      } else if (eventType === "hover") {
-        entry.Mouse_Hover = rnd(productNames) + " (" + (Math.random() * 8 + 0.3).toFixed(2) + "s)";
-      } else if (eventType === "search") {
-        entry.Search_Query = rnd(searchTerms);
-      } else if (eventType === "form_start" || eventType === "form_submit") {
-        entry.Button_Click = rnd(["Contact Form", "Checkout Shipping", "Login Form", "Newsletter"]);
-      } else if (eventType === "form_error") {
-        entry.Button_Click = rnd(["Contact Form - empty email", "Checkout - invalid pin", "Login - wrong password"]);
-      } else if (eventType === "form_abandon") {
-        entry.Button_Click = rnd(["Contact Form", "Checkout Shipping", "Login Form"]);
-      }
-      logs.push(entry);
-    }
-    logs.sort((a, b) => new Date(a.Timestamp) - new Date(b.Timestamp));
-  }
-
   function init() {
-    seedSyntheticLogs(520);
     trackPageView("home");
     document.addEventListener("click", trackClick, true);
     document.addEventListener("contextmenu", trackRightClick, true);
@@ -551,9 +718,18 @@ const AnalyticsEngine = (() => {
     document.addEventListener("keydown", (e) => {
       if (e.ctrlKey && e.shiftKey && e.key === "E") { e.preventDefault(); exportCSV(); }
     });
+    // periodic + reliable-on-exit sync to Google Sheets
+    setInterval(() => flushQueue(false), CONFIG.SYNC_INTERVAL_MS);
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") flushQueue(true); });
+    window.addEventListener("pagehide", () => flushQueue(true));
   }
 
-  return { init, trackPageView, trackSearch, trackHoverStart, trackHoverEnd, trackFormEvent, exportCSV, getLogCount: () => logs.length };
+  return {
+    init, trackPageView, trackSearch, trackHoverStart, trackHoverEnd, trackFormEvent,
+    logOrder, logUser, exportCSV,
+    getLogCount: () => logs.length,
+    getUserId: () => userId
+  };
 })();
 
 
@@ -894,6 +1070,25 @@ function checkoutNext() {
 function placeOrder() {
   if (!AppState.selectedPayment) { showToast("Please select a payment method", "error"); return; }
   AppState.orderId = "#DSP-" + Math.floor(100000 + Math.random() * 900000);
+
+  // Record what was actually bought — real order data, no card/payment
+  // secrets are read into this object.
+  const order = {
+    Order_ID: AppState.orderId,
+    Timestamp: new Date().toISOString(),
+    User_ID: AnalyticsEngine.getUserId(),
+    Customer_Name: document.getElementById("ship-name")?.value || "",
+    Phone: document.getElementById("ship-phone")?.value || "",
+    Address: document.getElementById("ship-addr1")?.value || "",
+    PIN_Code: document.getElementById("ship-pin")?.value || "",
+    Payment_Method: AppState.selectedPayment,
+    Items: AppState.cart.map(c => `${c.name} (${c.brand}) x${c.qty}`).join(" | "),
+    Item_Count: AppState.cart.reduce((n, c) => n + c.qty, 0),
+    Subtotal: getCartTotal(),
+    Total: getCartTotal()
+  };
+  AnalyticsEngine.logOrder(order);
+
   AppState.cart = [];
   AppState.checkoutStep = 2;
   updateCartBadge();
@@ -943,16 +1138,54 @@ function initSearch() {
   document.addEventListener("click", (e) => { if (!e.target.closest(".search-wrapper")) dropdown.classList.remove("active"); });
 }
 
-// ──── Login Modal ────
-function openLoginModal() { document.getElementById("login-modal")?.classList.add("open"); AnalyticsEngine.trackFormEvent("Login Form", "start"); }
+// ──── Login / Register Modal ────
+// IMPORTANT: password fields below are read only long enough to check
+// they're non-empty for this client-side demo. The value is never
+// stored, logged, or included in any object passed to AnalyticsEngine.
+function openLoginModal() { document.getElementById("login-modal")?.classList.add("open"); switchAuthTab("login"); }
 function closeLoginModal() { document.getElementById("login-modal")?.classList.remove("open"); }
+
+function switchAuthTab(which) {
+  const loginTab = document.getElementById("auth-tab-login");
+  const registerTab = document.getElementById("auth-tab-register");
+  const loginForm = document.getElementById("login-form-panel");
+  const registerForm = document.getElementById("register-form-panel");
+  if (!loginTab || !registerTab || !loginForm || !registerForm) return;
+  const isLogin = which === "login";
+  loginTab.classList.toggle("active", isLogin);
+  registerTab.classList.toggle("active", !isLogin);
+  loginForm.style.display = isLogin ? "block" : "none";
+  registerForm.style.display = isLogin ? "none" : "block";
+  AnalyticsEngine.trackFormEvent(isLogin ? "Login Form" : "Register Form", "start");
+}
+
 function handleLogin(e) {
   e.preventDefault();
   const email = document.getElementById("login-email")?.value;
-  const pass = document.getElementById("login-pass")?.value;
+  const pass = document.getElementById("login-pass")?.value; // read locally only — never stored/logged
   if (!email || !pass) { showToast("Please enter email and password", "error"); AnalyticsEngine.trackFormEvent("Login Form", "error"); return; }
   AnalyticsEngine.trackFormEvent("Login Form", "submit");
   showToast("Welcome back! Logged in successfully.", "success");
+  closeLoginModal();
+}
+
+function handleRegister(e) {
+  e.preventDefault();
+  const name = document.getElementById("reg-name")?.value;
+  const email = document.getElementById("reg-email")?.value;
+  const pass = document.getElementById("reg-pass")?.value;           // never stored/logged
+  const confirm = document.getElementById("reg-pass-confirm")?.value; // never stored/logged
+  if (!name || !email || !pass || !confirm) { showToast("Please fill all fields", "error"); AnalyticsEngine.trackFormEvent("Register Form", "error"); return; }
+  if (pass !== confirm) { showToast("Passwords don't match", "error"); AnalyticsEngine.trackFormEvent("Register Form", "error"); return; }
+  AnalyticsEngine.trackFormEvent("Register Form", "submit");
+  // Only name + email are recorded — the password itself is discarded here.
+  AnalyticsEngine.logUser({
+    User_ID: AnalyticsEngine.getUserId(),
+    Timestamp: new Date().toISOString(),
+    Name: name,
+    Email: email
+  });
+  showToast("Account created! You're logged in.", "success");
   closeLoginModal();
 }
 
