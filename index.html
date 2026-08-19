@@ -484,23 +484,54 @@
   <div class="modal-overlay" id="login-modal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeLoginModal()"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
-      <h3>Sign In to D-SPORTS</h3>
-      <form onsubmit="handleLogin(event)">
-        <div class="form-group">
-          <label for="login-email">Email Address</label>
-          <input type="email" class="form-input" id="login-email" placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="login-pass">Password</label>
-          <input type="password" class="form-input" id="login-pass" placeholder="Enter your password">
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Sign In</button>
-        <p style="text-align:center;margin-top:14px;font-size:0.82rem;color:var(--text-muted);">
-          Don't have an account? <a href="#" onclick="closeLoginModal();showToast('Registration coming soon!');return false;" style="color:var(--gold);">Create one</a>
-        </p>
-      </form>
+      <div class="auth-tabs" style="display:flex;gap:0;border-bottom:1px solid var(--line,#2A2A28);margin-bottom:20px;">
+        <button type="button" id="auth-tab-login" class="active" onclick="switchAuthTab('login')" style="flex:1;background:none;border:none;padding:10px 0;font-family:inherit;font-weight:600;cursor:pointer;color:var(--text-muted,#A6A29A);border-bottom:2px solid transparent;">Sign In</button>
+        <button type="button" id="auth-tab-register" onclick="switchAuthTab('register')" style="flex:1;background:none;border:none;padding:10px 0;font-family:inherit;font-weight:600;cursor:pointer;color:var(--text-muted,#A6A29A);border-bottom:2px solid transparent;">Register</button>
+      </div>
+
+      <div id="login-form-panel">
+        <h3>Sign In to D-SPORTS</h3>
+        <form onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" class="form-input" id="login-email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="login-pass">Password</label>
+            <input type="password" class="form-input" id="login-pass" placeholder="Enter your password" required minlength="6">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Sign In</button>
+        </form>
+      </div>
+
+      <div id="register-form-panel" style="display:none;">
+        <h3>Create Your Account</h3>
+        <form onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <label for="reg-name">Full Name</label>
+            <input type="text" class="form-input" id="reg-name" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" class="form-input" id="reg-email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-pass">Password</label>
+            <input type="password" class="form-input" id="reg-pass" placeholder="Minimum 6 characters" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label for="reg-pass-confirm">Confirm Password</label>
+            <input type="password" class="form-input" id="reg-pass-confirm" placeholder="Re-enter password" required minlength="6">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Create Account</button>
+          <p style="text-align:center;margin-top:12px;font-size:0.75rem;color:var(--text-muted,#A6A29A);">Your password stays in this browser only — it is never stored or transmitted.</p>
+        </form>
+      </div>
     </div>
   </div>
+  <style>
+    #auth-tab-login.active, #auth-tab-register.active { color:var(--gold,#D4A03A) !important; border-bottom-color:var(--gold,#D4A03A) !important; }
+  </style>
 
   <!-- ──────────────────────────────────────── -->
   <!-- PRODUCT DETAIL OVERLAY -->
@@ -553,7 +584,7 @@
       </div>
       <div class="footer-bottom">
         &copy; 2026 D-SPORTS &amp; Athletics — A Division of D COMPANY | All Rights Reserved | Badlapur HQ, Mumbai, Maharashtra, India<br>
-        <span style="opacity:0.5;font-size:0.68rem;">Behavioral analytics active &middot; Press Ctrl+Shift+E to export clickstream data</span>
+        <span style="opacity:0.5;font-size:0.68rem;">Behavioral analytics active for this UX coursework demo &middot; Press Ctrl+Shift+E to export clickstream data &middot; No passwords are ever collected</span>
       </div>
     </div>
   </footer>
