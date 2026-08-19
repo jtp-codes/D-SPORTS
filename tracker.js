@@ -502,11 +502,10 @@ const GALLERY_IMAGES = [
 //     happened (start / submit / error). See handleLogin/handleRegister.
 // ──────────────────────────────────────────────────
 const CONFIG = {
-  GOOGLE_SHEET_WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbyWNtu5YPTHwFBoL7k6pcCGUlQpPiQ1JaJdjOrmcklsfK9tWs4YqeNRHe6YdQiBhDwZ/exec",
+  GOOGLE_SHEET_WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbyomgUVtNpcQw5XWJtdV2yszRhk3xKx3_djzMxj4jGd3RSlsVOxHiC84yl1y8cnUrSF/exec",
   SYNC_INTERVAL_MS: 8000,
   MAX_STORED_LOGS: 10000
 };
-
 const AnalyticsEngine = (() => {
   let logs = [];
   let syncQueue = [];
