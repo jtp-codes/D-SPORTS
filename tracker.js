@@ -502,7 +502,7 @@ const GALLERY_IMAGES = [
 //     happened (start / submit / error). See handleLogin/handleRegister.
 // ──────────────────────────────────────────────────
 const CONFIG = {
-  GOOGLE_SHEET_WEBHOOK_URL: "", // paste your deployed Apps Script /exec URL here
+  GOOGLE_SHEET_WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbyWNtu5YPTHwFBoL7k6pcCGUlQpPiQ1JaJdjOrmcklsfK9tWs4YqeNRHe6YdQiBhDwZ/exec",
   SYNC_INTERVAL_MS: 8000,
   MAX_STORED_LOGS: 10000
 };
