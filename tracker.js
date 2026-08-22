@@ -166,7 +166,7 @@ const GALLERY_IMAGES = [
 // 3.  CONFIG — paste your deployed Apps Script /exec URL
 // ──────────────────────────────────────────────────
 const CONFIG = {
-  GOOGLE_SHEET_WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbzs8vx8lXlQ6zRxspV4UpK5CtD1T8MacC--EfQ0ysX486WIhJVxS_WvYpkGoDNDNmDh/exec", 
+  GOOGLE_SHEET_WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbwZ8X7CGfZj8iR1R6ObTD6VfbuWflTBHEvMeTAsB4v6NkJhBfhCWbqSunzR7xynmsUB/exec", 
   SYNC_INTERVAL_MS: 8000,
   MAX_STORED_LOGS: 10000,
   REAL_LOG_STORAGE_KEY: "dsports_real_clickstream_v1",
