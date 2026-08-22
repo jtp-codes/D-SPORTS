@@ -20,33 +20,30 @@
   <!-- ──── STICKY HEADER ──── -->
   <header class="header">
     <div class="header-inner">
-      <!-- Brand Logo -->
       <div class="brand-logo" onclick="navigateTo('home')">
         <div class="logo-icon">D</div>
         <div class="logo-text">D-<span>SPORTS</span></div>
       </div>
 
-      <!-- Global Search -->
       <div class="search-wrapper">
         <span class="search-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></span>
         <input type="text" class="search-bar" id="global-search" placeholder="Search products, brands, categories..." autocomplete="off">
         <div class="search-dropdown" id="search-dropdown"></div>
       </div>
 
-      <!-- Header Nav -->
       <div class="header-nav">
-        <a href="#wishlist" class="icon-btn" title="Wishlist">
+        <a href="#wishlist" class="icon-btn" title="Wishlist" aria-label="Wishlist">
           <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           <span class="badge wishlist-count"></span>
         </a>
-        <button class="icon-btn" onclick="openDrawerCart()" title="Cart">
+        <button class="icon-btn" onclick="openDrawerCart()" title="Cart" aria-label="Cart">
           <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
           <span class="badge cart-count"></span>
         </button>
-        <button class="icon-btn" onclick="openLoginModal()" title="Sign In">
+        <button class="icon-btn" onclick="openLoginModal()" title="Sign In" aria-label="Sign In">
           <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
         </button>
-        <button class="mobile-menu-btn icon-btn" onclick="document.querySelector('.main-nav').classList.toggle('mobile-open')">
+        <button class="mobile-menu-btn icon-btn" aria-label="Menu" onclick="document.querySelector('.main-nav').classList.toggle('mobile-open')">
           <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </button>
       </div>
@@ -66,12 +63,9 @@
     </div>
   </nav>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: HOME -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: HOME ──── -->
   <div id="view-home" class="page-view active">
 
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
@@ -87,7 +81,6 @@
       </div>
     </section>
 
-    <!-- Brand Marquee -->
     <div class="brand-marquee">
       <div class="marquee-track">
         <span>NIKE</span><span>ADIDAS</span><span>PUMA</span><span>WILSON</span><span>YONEX</span><span>SS TON</span><span>MRF</span><span>SPALDING</span><span>D-SPORTS</span>
@@ -95,7 +88,6 @@
       </div>
     </div>
 
-    <!-- Features Strip -->
     <div class="features-strip">
       <div class="feature-item">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg></div>
@@ -119,7 +111,6 @@
       </div>
     </div>
 
-    <!-- Featured Products -->
     <section class="section">
       <h2 class="section-title">Featured <span class="gold">Equipment</span></h2>
       <p class="section-subtitle">Hand-picked match-grade gear for competitive athletes</p>
@@ -131,15 +122,12 @@
 
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: PRODUCTS -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: PRODUCTS ──── -->
   <div id="view-products" class="page-view">
     <section class="section">
       <h2 class="section-title">Our <span class="gold">Collection</span></h2>
-      <p class="section-subtitle">Browse 24 match-grade products across 6 sport categories</p>
+      <p class="section-subtitle" id="products-subtitle">Browse match-grade products across 6 sport categories</p>
 
-      <!-- Category Filter -->
       <div class="category-bar">
         <button class="cat-pill active" data-category="All" onclick="filterCategory('All')">All</button>
         <button class="cat-pill" data-category="Football" onclick="filterCategory('Football')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3l2.5 1.8-.9 2.9H10.4l-.9-2.9L12 5zm-6.2 4.5h2.9l.9 2.9-2.3 1.7-2.3-1.7.8-2.9zm2.3 8.2l.9-2.9h5.6l.9 2.9-3.5 1.3-3.9-1.3zm10.7-5.3l-2.3 1.7-.9-2.9.9-2.9h2.9l.8 2.9-1.4 1.2z" fill="currentColor" opacity="0.6"/></svg> Football</button>
@@ -154,9 +142,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: ABOUT -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: ABOUT ──── -->
   <div id="view-about" class="page-view">
     <section class="section">
       <h2 class="section-title">About <span class="gold">D-SPORTS</span></h2>
@@ -166,49 +152,35 @@
         <div class="about-text">
           <h3>India's Premier Multi-Brand Sporting Outfitter</h3>
           <p>
-            D-SPORTS &amp; Athletics is the sporting goods division of D COMPANY, headquartered in Badlapur East, 
-            Mumbai Metropolitan Region. Since our inception, we've been committed to equipping athletes, coaches, 
+            D-SPORTS &amp; Athletics is the sporting goods division of D COMPANY, headquartered in Badlapur East,
+            Mumbai Metropolitan Region. Since our inception, we've been committed to equipping athletes, coaches,
             and fitness enthusiasts with authentic, match-grade equipment from the world's top sporting brands.
           </p>
           <p>
-            Our Distribution HQ at Plot 42, Industrial Development Zone, Badlapur East, serves as both our 
-            primary warehouse and customer experience center. With authorized partnerships with Nike, Adidas, 
-            Puma, Wilson, Yonex, SS Ton, MRF, and Spalding, we guarantee 100% genuine products with full 
+            Our Distribution HQ at Plot 42, Industrial Development Zone, Badlapur East, serves as both our
+            primary warehouse and customer experience center. With authorized partnerships with Nike, Adidas,
+            Puma, Wilson, Yonex, SS Ton, MRF, and Spalding, we guarantee 100% genuine products with full
             manufacturer warranty.
           </p>
           <p>
-            From professional cricket kits used in Ranji Trophy matches to FIFA-spec match footballs, 
-            tournament-grade tennis racquets, and commercial gym equipment — every product in our catalog 
+            From professional cricket kits used in Ranji Trophy matches to FIFA-spec match footballs,
+            tournament-grade tennis racquets, and commercial gym equipment — every product in our catalog
             is curated by sport specialists who understand the demands of competitive play.
           </p>
         </div>
-        <img src="https://images.pexels.com/photos/15362139/pexels-photo-15362139.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Sports Stadium — D-SPORTS Experience" class="about-img">
+        <img src="https://images.pexels.com/photos/15362139/pexels-photo-15362139.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Packed stadium — the competitive sport atmosphere D-SPORTS equips athletes for" class="about-img">
       </div>
 
       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-num">8+</div>
-          <div class="stat-label">Global Brands</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">15K+</div>
-          <div class="stat-label">Products Shipped</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">6</div>
-          <div class="stat-label">Sport Categories</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">99%</div>
-          <div class="stat-label">Satisfaction Rate</div>
-        </div>
+        <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Global Brands</div></div>
+        <div class="stat-card"><div class="stat-num">15K+</div><div class="stat-label">Products Shipped</div></div>
+        <div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Sport Categories</div></div>
+        <div class="stat-card"><div class="stat-num">99%</div><div class="stat-label">Satisfaction Rate</div></div>
       </div>
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: SERVICES -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: SERVICES ──── -->
   <div id="view-services" class="page-view">
     <section class="section">
       <h2 class="section-title">Our <span class="gold">Services</span></h2>
@@ -249,9 +221,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: GALLERY -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: GALLERY ──── -->
   <div id="view-gallery" class="page-view">
     <section class="section">
       <h2 class="section-title">Sports <span class="gold">Gallery</span></h2>
@@ -260,9 +230,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: FAQ -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: FAQ ──── -->
   <div id="view-faq" class="page-view">
     <section class="section">
       <h2 class="section-title">Frequently Asked <span class="gold">Questions</span></h2>
@@ -274,80 +242,62 @@
             <span>Are all products on D-SPORTS 100% genuine?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>Yes, absolutely. D-SPORTS is an authorized retailer and distributor for all listed brands including Nike, Adidas, Puma, Wilson, Yonex, SS Ton, MRF, and Spalding. Every product comes with the manufacturer's original warranty and authenticity guarantee.</p>
-          </div>
+          <div class="faq-answer"><p>Yes, absolutely. D-SPORTS is an authorized retailer and distributor for all listed brands including Nike, Adidas, Puma, Wilson, Yonex, SS Ton, MRF, and Spalding. Every product comes with the manufacturer's original warranty and authenticity guarantee.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>What is your shipping policy?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>We offer free shipping on all orders above &#8377;5,000 within India. Standard delivery takes 3&ndash;5 business days from our Badlapur HQ. Express delivery (1&ndash;2 days) is available for Mumbai Metropolitan Region addresses at a nominal charge of &#8377;199.</p>
-          </div>
+          <div class="faq-answer"><p>We offer free shipping on all orders above &#8377;5,000 within India. Standard delivery takes 3&ndash;5 business days from our Badlapur HQ. Express delivery (1&ndash;2 days) is available for Mumbai Metropolitan Region addresses at a nominal charge of &#8377;199.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Can I return or exchange a product?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>Yes. We have a 15-day hassle-free return and exchange policy. Products must be in unused condition with original packaging and tags. Customized items (bat knocking, jersey printing) are non-returnable. Refunds are processed within 5&ndash;7 business days.</p>
-          </div>
+          <div class="faq-answer"><p>Yes. We have a 15-day hassle-free return and exchange policy. Products must be in unused condition with original packaging and tags. Customized items (bat knocking, jersey printing) are non-returnable. Refunds are processed within 5&ndash;7 business days.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Do you offer bulk/corporate pricing?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>Yes, we provide special pricing for bulk orders from schools, academies, corporate events, and tournament organizers. Contact our sales team at studio@dsports.example or call +91 98200 11223 for a custom quote.</p>
-          </div>
+          <div class="faq-answer"><p>Yes, we provide special pricing for bulk orders from schools, academies, corporate events, and tournament organizers. Contact our sales team at studio@dsports.example or call +91 98200 11223 for a custom quote.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>What payment methods do you accept?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>We accept all major payment methods: UPI (Google Pay, PhonePe, Paytm, BHIM), Credit/Debit Cards (Visa, Mastercard, RuPay), Net Banking, and EMI options on select cards. All transactions are secured with 256-bit SSL encryption.</p>
-          </div>
+          <div class="faq-answer"><p>We accept all major payment methods: UPI (Google Pay, PhonePe, Paytm, BHIM), Credit/Debit Cards (Visa, Mastercard, RuPay), Net Banking, and EMI options on select cards. All transactions are secured with 256-bit SSL encryption.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Can I visit your store in Badlapur?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>Absolutely! Our Experience Center and Distribution HQ is located at Plot 42, Industrial Development Zone, Badlapur East, MMR, Mumbai, Maharashtra 421503. Store hours: Mon&ndash;Sat 09:00&ndash;21:00 IST, Sunday 10:00&ndash;18:00 IST. Walk-ins welcome!</p>
-          </div>
+          <div class="faq-answer"><p>Absolutely! Our Experience Center and Distribution HQ is located at Plot 42, Industrial Development Zone, Badlapur East, MMR, Mumbai, Maharashtra 421503. Store hours: Mon&ndash;Sat 09:00&ndash;21:00 IST, Sunday 10:00&ndash;18:00 IST. Walk-ins welcome!</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>How do I track my order?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>After placing your order, you'll receive a tracking ID (e.g., #DSP-884920) via email and SMS. Use this ID on our website or contact our support line at +91 (0251) 269-8000 for real-time shipment updates.</p>
-          </div>
+          <div class="faq-answer"><p>After placing your order, you'll receive a tracking ID (e.g., #DSP-884920) via email and SMS. Use this ID on our website or contact our support line at +91 (0251) 269-8000 for real-time shipment updates.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
             <span>Do you provide cricket bat knocking services?</span>
             <span class="faq-icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
           </button>
-          <div class="faq-answer">
-            <p>Yes, we offer professional bat knocking using industry-standard mallets. The process includes oiling, gentle pressing, and gradual knocking over 6&ndash;8 hours to prepare the blade for match use. This service is available at our Badlapur center or via courier (ship your bat to us).</p>
-          </div>
+          <div class="faq-answer"><p>Yes, we offer professional bat knocking using industry-standard mallets. The process includes oiling, gentle pressing, and gradual knocking over 6&ndash;8 hours to prepare the blade for match use. This service is available at our Badlapur center or via courier (ship your bat to us).</p></div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: CONTACT -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: CONTACT ──── -->
   <div id="view-contact" class="page-view">
     <section class="section">
       <h2 class="section-title">Contact <span class="gold">Us</span></h2>
@@ -430,9 +380,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: WISHLIST -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: WISHLIST ──── -->
   <div id="view-wishlist" class="page-view">
     <section class="section">
       <h2 class="section-title">Your <span class="gold">Wishlist</span></h2>
@@ -441,9 +389,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: CART -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: CART ──── -->
   <div id="view-cart" class="page-view">
     <section class="section">
       <h2 class="section-title">Shopping <span class="gold">Cart</span></h2>
@@ -452,9 +398,7 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- VIEW: CHECKOUT -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── VIEW: CHECKOUT ──── -->
   <div id="view-checkout" class="page-view">
     <section class="section">
       <h2 class="section-title">Secure <span class="gold">Checkout</span></h2>
@@ -463,14 +407,12 @@
     </section>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- SLIDE-OUT CART DRAWER -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── SLIDE-OUT CART DRAWER ──── -->
   <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="closeDrawerCart()"></div>
   <div class="cart-drawer" id="cart-drawer">
     <div class="drawer-header">
       <h3><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> Your Cart</h3>
-      <button class="drawer-close" onclick="closeDrawerCart()"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+      <button class="drawer-close" onclick="closeDrawerCart()" aria-label="Close cart"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
     </div>
     <div class="drawer-body" id="drawer-body">
       <p style="text-align:center;color:var(--text-muted);padding:40px 0;">Cart is empty</p>
@@ -478,15 +420,14 @@
     <div class="drawer-footer" id="drawer-footer"></div>
   </div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- LOGIN MODAL -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── LOGIN / REGISTER MODAL ──── -->
   <div class="modal-overlay" id="login-modal">
     <div class="modal-box">
-      <button class="modal-close" onclick="closeLoginModal()"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
-      <div class="auth-tabs" style="display:flex;gap:0;border-bottom:1px solid var(--line,#2A2A28);margin-bottom:20px;">
-        <button type="button" id="auth-tab-login" class="active" onclick="switchAuthTab('login')" style="flex:1;background:none;border:none;padding:10px 0;font-family:inherit;font-weight:600;cursor:pointer;color:var(--text-muted,#A6A29A);border-bottom:2px solid transparent;">Sign In</button>
-        <button type="button" id="auth-tab-register" onclick="switchAuthTab('register')" style="flex:1;background:none;border:none;padding:10px 0;font-family:inherit;font-weight:600;cursor:pointer;color:var(--text-muted,#A6A29A);border-bottom:2px solid transparent;">Register</button>
+      <button class="modal-close" onclick="closeLoginModal()" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+
+      <div class="auth-tabs">
+        <button type="button" id="auth-tab-login" class="auth-tab active" onclick="switchAuthTab('login')">Sign In</button>
+        <button type="button" id="auth-tab-register" class="auth-tab" onclick="switchAuthTab('register')">Register</button>
       </div>
 
       <div id="login-form-panel">
@@ -524,28 +465,19 @@
             <input type="password" class="form-input" id="reg-pass-confirm" placeholder="Re-enter password" required minlength="6">
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Create Account</button>
-          <p style="text-align:center;margin-top:12px;font-size:0.75rem;color:var(--text-muted,#A6A29A);">Your password stays in this browser only — it is never stored or transmitted.</p>
+          <p style="text-align:center;margin-top:12px;font-size:0.75rem;color:var(--text-muted);">Your password stays in this browser only — it is never stored or transmitted.</p>
         </form>
       </div>
     </div>
   </div>
-  <style>
-    #auth-tab-login.active, #auth-tab-register.active { color:var(--gold,#D4A03A) !important; border-bottom-color:var(--gold,#D4A03A) !important; }
-  </style>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- PRODUCT DETAIL OVERLAY -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── PRODUCT DETAIL OVERLAY ──── -->
   <div class="product-detail-overlay" id="product-detail-overlay" onclick="if(event.target===this)closeProductDetail()"></div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- TOAST NOTIFICATIONS -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── TOAST NOTIFICATIONS ──── -->
   <div class="toast-container" id="toast-container"></div>
 
-  <!-- ──────────────────────────────────────── -->
-  <!-- FOOTER -->
-  <!-- ──────────────────────────────────────── -->
+  <!-- ──── FOOTER ──── -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -589,7 +521,6 @@
     </div>
   </footer>
 
-  <!-- TRACKER JS -->
   <script src="tracker.js"></script>
 </body>
 </html>
