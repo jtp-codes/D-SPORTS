@@ -669,12 +669,22 @@ ul { list-style: none; }
   color: var(--gold);
 }
 
-.product-card .card-price .old-price {
+/* ---- Old/struck price — GLOBAL rule (applies in cards AND detail modal) ---- */
+.old-price {
   font-size: 0.78rem;
   color: var(--text-muted);
   text-decoration: line-through;
   font-weight: 400;
-  margin-left: 6px;
+  margin-left: 8px;
+}
+
+/* Larger context (product detail overlay): keep strikethrough, scale up slightly */
+.pd-footer .card-price .old-price {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-weight: 400;
+  margin-left: 10px;
 }
 
 .card-actions {
@@ -1734,6 +1744,10 @@ textarea.form-input {
   font-size: 1.4rem;
   font-weight: 900;
   color: var(--gold);
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px;
 }
 
 .pd-close {
@@ -1936,4 +1950,58 @@ textarea.form-input {
   .section { padding: 40px 16px; }
   .product-grid { grid-template-columns: 1fr; }
   .features-strip { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Auth Modal Tabs (moved from inline <style>) ---- */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.auth-tabs .auth-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.auth-tabs .auth-tab:hover {
+  color: var(--text-primary);
+}
+
+.auth-tabs .auth-tab.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.auth-tabs .auth-tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+/* ---- Gallery duplicate render guard ---- */
+.gallery-item img { background: #111; }
+
+/* ---- Mobile nav toggle state ---- */
+.main-nav.mobile-open .main-nav-inner {
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .brand-logo .logo-text { font-size: 1.05rem; }
+  .icon-btn { width: 36px; height: 36px; }
+  .header { padding: 0 12px; }
+  .cart-summary { margin-left: 0; max-width: 100%; }
+  .cart-product-cell img { width: 48px; height: 48px; }
+  .pd-image { height: 240px; }
 }
