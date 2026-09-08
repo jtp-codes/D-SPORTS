@@ -687,14 +687,12 @@ function checkoutNext() {
     return; 
   }
 
-  // Validate Name has no numbers and contains valid characters
   if (/\d/.test(name)) {
     showToast("Full Name cannot contain numbers", "error");
     AnalyticsEngine.trackFormEvent("Checkout Shipping", "error");
     return;
   }
 
-  // Validate Phone is exactly 10 digits
   if (!/^\d{10}$/.test(phone)) {
     showToast("Phone number must be exactly 10 digits", "error");
     AnalyticsEngine.trackFormEvent("Checkout Shipping", "error");
