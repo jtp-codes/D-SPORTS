@@ -214,10 +214,7 @@ const AnalyticsEngine = (() => {
 
   function loadStoredLogs() {
     try {
-      // The legacy key may contain synthetic records from an older build.
-      // Delete it without migration so Ctrl+Shift+E exports real activity only.
       localStorage.removeItem(CONFIG.LEGACY_LOG_STORAGE_KEY);
-
       const stored = JSON.parse(localStorage.getItem(CONFIG.REAL_LOG_STORAGE_KEY) || "[]");
       return Array.isArray(stored) ? stored : [];
     } catch (e) {
@@ -345,7 +342,6 @@ const AnalyticsEngine = (() => {
   }
 
   function init() {
-    // The router records the initial page view after initialization.
     document.addEventListener("click", trackClick, true);
     document.addEventListener("contextmenu", trackRightClick, true);
     document.addEventListener("dblclick", trackDblClick, true);
@@ -369,8 +365,25 @@ const AppState = { cart: [], wishlist: [], currentCategory: "All", checkoutStep:
 
 function navigateTo(hash) { window.location.hash = hash; }
 
+function isUserLoggedIn() {
+  try {
+    return localStorage.getItem("dsports_logged_in") === "true";
+  } catch (e) {
+    return false;
+  }
+}
+
 function handleRoute() {
   const hash = window.location.hash.replace("#", "") || "home";
+
+  // Login Guard for Checkout / Payment page
+  if (hash === "checkout" && !isUserLoggedIn()) {
+    showToast("Please log in or register to proceed to payment.", "error");
+    openLoginModal();
+    window.location.hash = "cart";
+    return;
+  }
+
   document.querySelectorAll(".page-view").forEach(v => v.classList.remove("active"));
   const target = document.getElementById("view-" + hash);
   if (target) target.classList.add("active");
@@ -676,7 +689,6 @@ function checkoutNext() {
 function placeOrder() {
   if (!AppState.selectedPayment) { showToast("Please select a payment method", "error"); return; }
   AppState.orderId = "#DSP-" + Math.floor(100000 + Math.random() * 900000);
-  // FIX: real subtotal now recorded correctly (was logging grand total as both)
   const order = {
     Order_ID: AppState.orderId,
     Timestamp: new Date().toISOString(),
@@ -763,8 +775,13 @@ function switchAuthTab(which) {
 function handleLogin(e) {
   e.preventDefault();
   const email = document.getElementById("login-email")?.value;
-  const pass = document.getElementById("login-pass")?.value; // read-only check — never stored/logged
+  const pass = document.getElementById("login-pass")?.value;
   if (!email || !pass) { showToast("Please enter email and password", "error"); AnalyticsEngine.trackFormEvent("Login Form", "error"); return; }
+  
+  try {
+    localStorage.setItem("dsports_logged_in", "true");
+  } catch (err) {}
+
   AnalyticsEngine.trackFormEvent("Login Form", "submit");
   showToast("Welcome back! Logged in successfully.", "success");
   closeLoginModal();
@@ -774,10 +791,15 @@ function handleRegister(e) {
   e.preventDefault();
   const name = document.getElementById("reg-name")?.value;
   const email = document.getElementById("reg-email")?.value;
-  const pass = document.getElementById("reg-pass")?.value;             // never stored/logged
-  const confirm = document.getElementById("reg-pass-confirm")?.value;  // never stored/logged
+  const pass = document.getElementById("reg-pass")?.value;             
+  const confirm = document.getElementById("reg-pass-confirm")?.value;  
   if (!name || !email || !pass || !confirm) { showToast("Please fill all fields", "error"); AnalyticsEngine.trackFormEvent("Register Form", "error"); return; }
   if (pass !== confirm) { showToast("Passwords don't match", "error"); AnalyticsEngine.trackFormEvent("Register Form", "error"); return; }
+
+  try {
+    localStorage.setItem("dsports_logged_in", "true");
+  } catch (err) {}
+
   AnalyticsEngine.trackFormEvent("Register Form", "submit");
   AnalyticsEngine.logUser({ User_ID: AnalyticsEngine.getUserId(), Timestamp: new Date().toISOString(), Name: name, Email: email });
   showToast("Account created! You're logged in.", "success");
