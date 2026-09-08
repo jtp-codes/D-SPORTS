@@ -376,9 +376,9 @@ function isUserLoggedIn() {
 function handleRoute() {
   const hash = window.location.hash.replace("#", "") || "home";
 
-  // Login Guard for Checkout / Payment page
+  // Login Guard: Unregistered/unlogged users cannot access checkout
   if (hash === "checkout" && !isUserLoggedIn()) {
-    showToast("Please log in or register to proceed to payment.", "error");
+    showToast("Please log in or register to proceed to checkout.", "error");
     openLoginModal();
     window.location.hash = "cart";
     return;
@@ -833,7 +833,7 @@ function handleContactSubmit(e) {
   const email = document.getElementById("contact-email")?.value;
   const msg = document.getElementById("contact-msg")?.value;
   if (!name || !email || !msg) { showToast("Please fill all fields", "error"); AnalyticsEngine.trackFormEvent("Contact Form", "error"); return; }
-  AnalyticsEngine.trackFormEvent("Contact Form", "error"); // or submit
+  AnalyticsEngine.trackFormEvent("Contact Form", "submit");
   showToast("Message sent! We'll get back to you soon.", "success");
   e.target.reset();
 }
@@ -859,7 +859,7 @@ function renderFeaturedProducts() {
   attachProductListeners();
 }
 
-// ──── Init ::_
+// ──── Init ────
 document.addEventListener("DOMContentLoaded", () => {
   AnalyticsEngine.init();
   window.addEventListener("hashchange", handleRoute);
