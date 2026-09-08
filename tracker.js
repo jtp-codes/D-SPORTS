@@ -625,8 +625,8 @@ function renderCheckout() {
       <div class="checkout-panel">
         <h3>${SVG.pin} Shipping Address</h3>
         <div class="form-row">
-          <div class="form-group"><label>Full Name</label><input type="text" class="form-input" id="ship-name" placeholder="e.g. Rahul Sharma" onfocus="AnalyticsEngine.trackFormEvent('Checkout Shipping','start')"></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" class="form-input" id="ship-phone" placeholder="+91 98200 xxxxx"></div>
+          <div class="form-group"><label>Full Name (Letters Only)</label><input type="text" class="form-input" id="ship-name" placeholder="e.g. Rahul Sharma" oninput="this.value = this.value.replace(/[^A-Za-z\\s]/g, '')" onfocus="AnalyticsEngine.trackFormEvent('Checkout Shipping','start')"></div>
+          <div class="form-group"><label>Phone Number (10 Digits)</label><input type="tel" class="form-input" id="ship-phone" placeholder="98200XXXXX" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"></div>
         </div>
         <div class="form-group"><label>Address Line 1</label><input type="text" class="form-input" id="ship-addr1" placeholder="Flat / House No., Building Name"></div>
         <div class="form-group"><label>Address Line 2</label><input type="text" class="form-input" id="ship-addr2" placeholder="Street, Locality"></div>
@@ -676,11 +676,31 @@ function renderCheckout() {
 function selectPayment(m) { AppState.selectedPayment = m; renderCheckout(); }
 
 function checkoutNext() {
-  const name = document.getElementById("ship-name")?.value;
-  const phone = document.getElementById("ship-phone")?.value;
+  const name = document.getElementById("ship-name")?.value.trim();
+  const phone = document.getElementById("ship-phone")?.value.trim();
   const addr1 = document.getElementById("ship-addr1")?.value;
   const pin = document.getElementById("ship-pin")?.value;
-  if (!name || !phone || !addr1 || !pin) { showToast("Please fill all required shipping fields", "error"); AnalyticsEngine.trackFormEvent("Checkout Shipping", "error"); return; }
+
+  if (!name || !phone || !addr1 || !pin) { 
+    showToast("Please fill all required shipping fields", "error"); 
+    AnalyticsEngine.trackFormEvent("Checkout Shipping", "error"); 
+    return; 
+  }
+
+  // Validate Name has no numbers and contains valid characters
+  if (/\d/.test(name)) {
+    showToast("Full Name cannot contain numbers", "error");
+    AnalyticsEngine.trackFormEvent("Checkout Shipping", "error");
+    return;
+  }
+
+  // Validate Phone is exactly 10 digits
+  if (!/^\d{10}$/.test(phone)) {
+    showToast("Phone number must be exactly 10 digits", "error");
+    AnalyticsEngine.trackFormEvent("Checkout Shipping", "error");
+    return;
+  }
+
   AnalyticsEngine.trackFormEvent("Checkout Shipping", "submit");
   AppState.checkoutStep = 1;
   renderCheckout();
