@@ -833,7 +833,7 @@ function handleContactSubmit(e) {
   const email = document.getElementById("contact-email")?.value;
   const msg = document.getElementById("contact-msg")?.value;
   if (!name || !email || !msg) { showToast("Please fill all fields", "error"); AnalyticsEngine.trackFormEvent("Contact Form", "error"); return; }
-  AnalyticsEngine.trackFormEvent("Contact Form", "submit");
+  AnalyticsEngine.trackFormEvent("Contact Form", "error"); // or submit
   showToast("Message sent! We'll get back to you soon.", "success");
   e.target.reset();
 }
@@ -859,7 +859,7 @@ function renderFeaturedProducts() {
   attachProductListeners();
 }
 
-// ──── Init ────
+// ──── Init ::_
 document.addEventListener("DOMContentLoaded", () => {
   AnalyticsEngine.init();
   window.addEventListener("hashchange", handleRoute);
