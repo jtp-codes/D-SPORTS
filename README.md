@@ -72,5 +72,5 @@ D-SPORTS/
 ├── styles.css              # Responsive UI & styling
 ├── tracker.js              # Custom vanilla JS DOM telemetry engine
 ├── analytics/              # R ETL scripts, hypothesis tests & cleaned dataset
-├── dashboard/              # Power BI (.pbix) & executive dashboard exports
-└── docs/                   # Project synopsis (PDF) & defense deck (PPTX)
+└──dashboard/              # Power BI (.pbix) & executive dashboard exports
+
